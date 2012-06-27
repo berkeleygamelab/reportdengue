@@ -3,9 +3,13 @@ class ReportsController < ApplicationController
   before_filter :require_login, :except => [:sms, :verification]
 
   def index
-    @reports = @current_user.reports_with_stats
+    @reports = @current_user.reports
+    @view = params[:view]
+    if @view.nil?
+      @view = 'recent'
+    end
   end
-  
+
   def new
     @report = @current_user.created_reports.new
     @report.location = Location.new
