@@ -1,18 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.1'
+gem 'rails', '~> 3.2.6'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails'
-end
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 gem 'thin'
 gem 'haml'
@@ -31,6 +21,7 @@ gem 'ruby-gmail'
 gem 'therubyracer' # this is required for the coffeescript compiler to work on linux
 gem 'simple_enum'
 gem 'awesome_nested_set'
+gem 'pg_search'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -57,6 +48,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'rspec-rails'
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions  
   gem 'database_cleaner' # to clear Cucumber's test database between runs
   gem 'capybara'         # lets Cucumber pretend to be a web browser
