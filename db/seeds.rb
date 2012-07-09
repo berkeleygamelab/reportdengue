@@ -107,5 +107,6 @@ e2 = Post.create(:user_id => u11.id, :content => "train Luke as a Jedi")
 e2.children << Post.new(:content => "don't use your eyes", :user_id => u11.id)
 e2.children << Post.new(:content => "be angry, you must not", :user_id => u6.id)
 e3 = Post.create(:user_id => u5.id, :content => "convert Anakin to the dark side")
+e4 = Post.create(:user_id => u2.id, :content => "the ability to destroy a planet is insignificant next to the power of the force")
 puts "events and comments created"
 
